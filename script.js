@@ -1,34 +1,16 @@
 // Initialize AOS (Animate On Scroll)
 document.addEventListener('DOMContentLoaded', () => {
-    // Preloader Logic
-    const preloader = document.getElementById('preloader');
-    if (preloader) {
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                preloader.style.opacity = '0';
-                setTimeout(() => {
-                    preloader.style.display = 'none';
-                    // Trigger AOS after preloader is gone
-                    AOS.init({
-                        duration: 800,
-                        easing: 'ease-out-cubic',
-                        once: true,
-                        offset: 50,
-                        delay: 50,
-                    });
-                    initTypingEffect();
-                }, 500);
-            }, 1000); // Minimum load time
-        });
-    } else {
-        AOS.init({
-            duration: 800,
-            easing: 'ease-out-cubic',
-            once: true,
-            offset: 50,
-            delay: 50,
-        });
-    }
+    // Init AOS immediately
+    AOS.init({
+        duration: 800,
+        easing: 'ease-out-cubic',
+        once: true,
+        offset: 50,
+        delay: 50,
+    });
+
+    // Start Typing Effect
+    initTypingEffect();
 
     // Particle Background Logic
     initParticles();
