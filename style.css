@@ -1,173 +1,74 @@
-/* Global Styles */
-:root {
-    --neon-green: #39FF14;
-    --dark-bg: #050505;
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
 }
 
+::-webkit-scrollbar-track {
+    background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #39FF14;
+}
+
+/* Base Styles */
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    background-color: var(--dark-bg);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    background-color: #050505;
+    cursor: default;
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: #000;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #333;
-    border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: var(--neon-green);
+/* Typography Overrides */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Orbitron', sans-serif;
 }
 
 /* Glassmorphism Utilities */
-.glass-header {
-    background: rgba(5, 5, 5, 0.7);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+.glass-panel {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Neon Glow Effects */
-.glow-text {
-    text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+/* Navbar Scroll Effect */
+.nav-scrolled {
+    background: rgba(5, 5, 5, 0.8);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.glow-box {
-    box-shadow: 0 0 20px rgba(57, 255, 20, 0.2);
+/* Mobile Menu Animation */
+.menu-open {
+    transform: translateX(0) !important;
 }
 
-/* Clip Path for Slanted Buttons */
-.clip-path-slant {
-    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+/* Text Selection */
+::selection {
+    background: #39FF14;
+    color: #000;
 }
 
-/* Animation Utilities */
-@keyframes pulse-glow {
-
-    0%,
-    100% {
-        box-shadow: 0 0 20px rgba(57, 255, 20, 0.4);
-    }
-
-    50% {
-        box-shadow: 0 0 30px rgba(57, 255, 20, 0.7);
-    }
+/* Button Hover Effects */
+.btn-glow:hover {
+    box-shadow: 0 0 20px rgba(57, 255, 20, 0.4);
 }
 
-.animate-pulse-glow {
-    animation: pulse-glow 2s infinite;
-}
+/* Canvas Positioning */
+canvas {
+    display: block;
 
-/* Mobile Menu Transition */
-#mobile-menu {
-    transition: all 0.3s ease-in-out;
-}
-
-/* Glitch Effect */
-.glitch-wrapper {
-    position: relative;
-}
-
-.glitch-wrapper::before,
-.glitch-wrapper::after {
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--dark-bg);
-}
-
-.glitch-wrapper::before {
-    left: 2px;
-    text-shadow: -1px 0 #ff00c1;
-    clip: rect(44px, 450px, 56px, 0);
-    animation: glitch-anim 5s infinite linear alternate-reverse;
-}
-
-.glitch-wrapper::after {
-    left: -2px;
-    text-shadow: -1px 0 #00fff9;
-    clip: rect(44px, 450px, 56px, 0);
-    animation: glitch-anim2 5s infinite linear alternate-reverse;
-}
-
-@keyframes glitch-anim {
-    0% {
-        clip: rect(30px, 9999px, 10px, 0);
-    }
-
-    5% {
-        clip: rect(80px, 9999px, 90px, 0);
-    }
-
-    10% {
-        clip: rect(10px, 9999px, 40px, 0);
-    }
-
-    15% {
-        clip: rect(60px, 9999px, 20px, 0);
-    }
-
-    20% {
-        clip: rect(10px, 9999px, 80px, 0);
-    }
-
-    100% {
-        clip: rect(0, 0, 0, 0);
-    }
-}
-
-@keyframes glitch-anim2 {
-    0% {
-        clip: rect(10px, 9999px, 80px, 0);
-    }
-
-    5% {
-        clip: rect(60px, 9999px, 10px, 0);
-    }
-
-    10% {
-        clip: rect(30px, 9999px, 50px, 0);
-    }
-
-    15% {
-        clip: rect(90px, 9999px, 20px, 0);
-    }
-
-    20% {
-        clip: rect(10px, 9999px, 40px, 0);
-    }
-
-    100% {
-        clip: rect(0, 0, 0, 0);
-    }
-}
-
-/* Preloader Animation */
-@keyframes progress {
-    0% {
-        transform: scaleX(0);
-    }
-
-    100% {
-        transform: scaleX(1);
-    }
-}
-
-.animate-progress {
-    animation: progress 1.5s ease-in-out infinite;
 }
