@@ -274,7 +274,7 @@ document.addEventListener('DOMContentLoaded', () => {
         autoRotateInterval = setInterval(() => {
             currentIndex = (currentIndex + 1) % items.length;
             updateCarousel();
-        }, 3000);
+        }, 2000); // Changed from 3000ms to 2000ms
     }
 
     function stopAutoRotate() {
