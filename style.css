@@ -156,3 +156,18 @@ body {
         clip: rect(0, 0, 0, 0);
     }
 }
+
+/* Preloader Animation */
+@keyframes progress {
+    0% {
+        transform: scaleX(0);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.animate-progress {
+    animation: progress 1.5s ease-in-out infinite;
+}
