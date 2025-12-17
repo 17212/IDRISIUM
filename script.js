@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const heroCanvas = document.getElementById('hero-canvas');
     const heroContent = document.querySelector('.hero-content');
     const heroTitle = document.querySelector('.hero-title');
+    const comingSoonOverlay = document.getElementById('coming-soon-overlay');
+    const enterSiteBtn = document.getElementById('enter-site-btn');
 
     window.addEventListener('scroll', () => {
         const scrollY = window.scrollY;
@@ -41,6 +43,13 @@ document.addEventListener('DOMContentLoaded', () => {
             heroTitle.style.transform = `scale(${Math.max(scale, 0.95)})`;
         }
     });
+
+    if (enterSiteBtn && comingSoonOverlay) {
+        enterSiteBtn.addEventListener('click', () => {
+            comingSoonOverlay.classList.add('overlay-hidden');
+            document.body.style.overflow = '';
+        });
+    }
 
     // Magnetic Hover Effect for Navigation Links
     const magneticLinks = document.querySelectorAll('.magnetic-link');

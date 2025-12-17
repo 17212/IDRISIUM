@@ -26,6 +26,11 @@ body {
     cursor: default;
 }
 
+.overlay-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
 /* Typography Overrides */
 h1,
 h2,
