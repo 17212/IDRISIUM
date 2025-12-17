@@ -121,10 +121,10 @@
     <nav class="fixed w-full top-0 z-50 transition-all duration-500 border-b border-white/0" id="navbar">
         <div class="container mx-auto px-6 h-24 flex justify-between items-center">
             <!-- Logo -->
-            <a href="#" class="relative z-50 flex items-center gap-3 group"></a>
-            <img src="Gemini_Generated_Image_ccj1zlccj1zlccj1.png" alt="IDRISIUM"
-                class="h-8 w-auto transition-transform duration-300 group-hover:scale-105">
-            <span class="text-xl font-orbitron font-bold tracking-widest text-white">IDRISIUM</span>
+            <a href="#hero" class="relative z-50 flex items-center gap-3 group">
+                <img src="Gemini_Generated_Image_ccj1zlccj1zlccj1.png" alt="IDRISIUM"
+                    class="h-8 w-auto transition-transform duration-300 group-hover:scale-105">
+                <span class="text-xl font-orbitron font-bold tracking-widest text-white">IDRISIUM</span>
             </a>
 
             <!-- Desktop Menu -->
@@ -132,6 +132,12 @@
                 <a href="#products"
                     class="magnetic-link text-sm font-medium tracking-widest uppercase hover:text-neon-green transition-colors duration-300 relative group">
                     <span class="relative z-10">Ecosystem</span>
+                    <span
+                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-neon-green transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#roadmap"
+                    class="magnetic-link text-sm font-medium tracking-widest uppercase hover:text-neon-green transition-colors duration-300 relative group">
+                    <span class="relative z-10">Roadmap</span>
                     <span
                         class="absolute bottom-0 left-0 w-0 h-0.5 bg-neon-green transition-all duration-300 group-hover:w-full"></span>
                 </a>
@@ -164,6 +170,8 @@
         <div class="flex flex-col items-center space-y-8 text-center">
             <a href="#products"
                 class="mobile-link text-3xl font-orbitron font-bold text-white/50 hover:text-white transition-colors">ECOSYSTEM</a>
+            <a href="#roadmap"
+                class="mobile-link text-3xl font-orbitron font-bold text-white/50 hover:text-white transition-colors">ROADMAP</a>
             <a href="#vision"
                 class="mobile-link text-3xl font-orbitron font-bold text-white/50 hover:text-white transition-colors">VISION</a>
             <a href="#founder"
@@ -182,8 +190,13 @@
     <header class="relative h-screen flex items-center justify-center overflow-hidden" id="hero">
         <canvas id="hero-canvas" class="absolute inset-0 w-full h-full opacity-60 parallax-slow"></canvas>
         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-deep-black/50 to-deep-black"></div>
+        <div class="hero-aura"></div>
+        <div class="grid-accent"></div>
 
         <div class="relative z-10 text-center px-6 max-w-5xl mx-auto hero-content">
+            <div class="flex justify-center mb-6" data-aos="fade-up" data-aos-delay="60">
+                <span class="pill">Stealth Build • Offline Native</span>
+            </div>
             <h1 class="text-5xl md:text-7xl lg:text-9xl font-orbitron font-black tracking-tighter mb-8 leading-none hero-title"
                 data-aos="fade-up" data-aos-delay="100">
                 <span class="glitch-text" data-text="INTELLIGENCE">INTELLIGENCE</span><br>
@@ -191,11 +204,16 @@
                     class="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-500 to-gray-800 animate-gradient glow-text"
                     data-text="REDEFINED">REDEFINED</span>
             </h1>
-            <p class="text-gray-400 text-lg md:text-xl font-light tracking-wide max-w-2xl mx-auto mb-12"
+            <p class="text-gray-400 text-lg md:text-xl font-light tracking-wide max-w-2xl mx-auto mb-10"
                 data-aos="fade-up" data-aos-delay="200">
                 Forging the next era of offline-first artificial intelligence.
                 <br class="hidden md:block">Privacy is no longer an option. It is the architecture.
             </p>
+            <div class="flex flex-wrap items-center justify-center gap-3 mb-8" data-aos="fade-up" data-aos-delay="240">
+                <span class="chip chip--success"><i class="fas fa-shield-alt"></i> Zero Telemetry</span>
+                <span class="chip chip--success"><i class="fas fa-wifi-slash"></i> Works Offline</span>
+                <span class="chip chip--success"><i class="fas fa-lock"></i> AES-256 at Rest</span>
+            </div>
             <div class="flex flex-col md:flex-row items-center justify-center gap-6" data-aos="fade-up"
                 data-aos-delay="300">
                 <a href="#products"
@@ -205,6 +223,27 @@
                         <i class="fas fa-arrow-down text-sm transition-transform group-hover:translate-y-1"></i>
                     </span>
                 </a>
+                <a href="https://apkpure.com/p/com.idris.idrivia" target="_blank"
+                    class="cta-button group relative px-8 py-4 border border-neon-green/50 text-white font-bold font-orbitron tracking-widest uppercase overflow-hidden hover:border-neon-green hover:text-neon-green transition-colors duration-300">
+                    <span class="relative z-10 flex items-center gap-2">
+                        Download APK
+                        <i class="fas fa-download text-sm transition-transform group-hover:translate-y-1"></i>
+                    </span>
+                </a>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-12" data-aos="fade-up" data-aos-delay="360">
+                <div class="p-5 rounded-2xl border border-glass-border bg-glass-bg glass-panel">
+                    <p class="text-xs uppercase tracking-widest text-gray-500 mb-2">Latency</p>
+                    <p class="text-2xl font-orbitron font-bold text-white">Sub 40ms</p>
+                </div>
+                <div class="p-5 rounded-2xl border border-glass-border bg-glass-bg glass-panel">
+                    <p class="text-xs uppercase tracking-widest text-gray-500 mb-2">Connectivity</p>
+                    <p class="text-2xl font-orbitron font-bold text-neon-green">Offline Native</p>
+                </div>
+                <div class="p-5 rounded-2xl border border-glass-border bg-glass-bg glass-panel">
+                    <p class="text-xs uppercase tracking-widest text-gray-500 mb-2">Privacy</p>
+                    <p class="text-2xl font-orbitron font-bold text-white">Zero Tracking</p>
+                </div>
             </div>
         </div>
 
