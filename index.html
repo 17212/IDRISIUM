@@ -55,6 +55,68 @@
         class="fixed inset-0 pointer-events-none z-[5] opacity-[0.03] mix-blend-overlay bg-[url('https://grainy-gradients.vercel.app/noise.svg')]">
     </div>
 
+    <!-- Coming Soon Overlay -->
+    <div id="coming-soon-overlay"
+        class="fixed inset-0 z-[70] bg-gradient-to-br from-black via-black/95 to-black/90 backdrop-blur-2xl flex items-center justify-center px-6 transition-opacity duration-700">
+        <div
+            class="relative max-w-5xl w-full glass-panel border border-glass-border/60 rounded-[28px] p-10 md:p-14 overflow-hidden shadow-[0_30px_120px_rgba(0,0,0,0.65)]">
+            <div
+                class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(57,255,20,0.08),transparent_45%),radial-gradient(circle_at_70%_60%,rgba(57,255,20,0.06),transparent_40%)]">
+            </div>
+            <div class="relative flex flex-col gap-8 items-center text-center">
+                <div class="flex items-center gap-3 text-neon-green uppercase tracking-[0.2em] text-xs font-semibold">
+                    <span class="w-2 h-2 rounded-full bg-neon-green animate-ping"></span>
+                    <span class="w-2 h-2 rounded-full bg-neon-green"></span>
+                    <span>IDRISIUM</span>
+                </div>
+                <div class="space-y-4">
+                    <h1 class="text-4xl md:text-6xl font-orbitron font-black leading-tight tracking-tight">
+                        Launching Soon • <span class="glow-text">الوصول القادم</span>
+                    </h1>
+                    <p class="text-gray-400 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
+                        الموقع تحت التطوير الآن. نحضّر تجربة سيبرانية كاملة بتركيز على الخصوصية والعمل بدون اتصال.
+                        <br class="hidden md:block"> ترقّبوا الإصدار الأول قريبًا.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
+                    <div class="p-4 rounded-2xl border border-glass-border bg-glass-bg">
+                        <p class="text-sm uppercase tracking-widest text-gray-400">الحالة</p>
+                        <p class="text-2xl font-orbitron font-bold text-white">Under Construction</p>
+                    </div>
+                    <div class="p-4 rounded-2xl border border-glass-border bg-glass-bg">
+                        <p class="text-sm uppercase tracking-widest text-gray-400">الإطلاق</p>
+                        <p class="text-2xl font-orbitron font-bold text-neon-green">قريباً</p>
+                    </div>
+                    <div class="p-4 rounded-2xl border border-glass-border bg-glass-bg">
+                        <p class="text-sm uppercase tracking-widest text-gray-400">الوضع</p>
+                        <p class="text-2xl font-orbitron font-bold text-white">Stealth Build</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-4 items-center justify-center">
+                    <a href="mailto:idris.ghamid@gmail.com"
+                        class="cta-button group relative px-7 py-4 bg-neon-green text-black font-bold font-orbitron tracking-widest uppercase rounded-xl overflow-hidden hover:brightness-110 transition">
+                        <span class="relative z-10 flex items-center gap-2">
+                            أخبرني عند الإطلاق
+                            <i class="fas fa-bell text-sm transition-transform group-hover:translate-y-1"></i>
+                        </span>
+                    </a>
+                    <a href="https://t.me/IDRV72" target="_blank"
+                        class="px-7 py-4 border border-neon-green/40 rounded-xl text-white font-bold font-orbitron tracking-widest uppercase hover:border-neon-green/80 hover:text-neon-green transition">
+                        تابع التحديثات
+                    </a>
+                    <button id="enter-site-btn"
+                        class="px-6 py-3 text-sm text-gray-400 hover:text-white transition underline underline-offset-4">
+                        استكشاف النسخة الحالية
+                    </button>
+                </div>
+                <p class="text-xs text-gray-500 uppercase tracking-[0.3em]">Silent by Design • Offline First • Zero
+                    Telemetry</p>
+            </div>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="fixed w-full top-0 z-50 transition-all duration-500 border-b border-white/0" id="navbar">
         <div class="container mx-auto px-6 h-24 flex justify-between items-center">
